@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def cargar_datos(ruta):
-    # Lee el archivo Excel correctamente
+    # Lee el archivo Excel 
     return pd.read_excel(ruta) 
 
 def generar_reporte_operaciones(df):
@@ -20,7 +20,7 @@ def generar_reporte_ambiental(df):
     return df_amb
 
 def construir_dashboard(df):
-    # Aquí están los 4 gráficos encapsulados en una función modular
+    # Gráficos encapsulados en una función modular
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     
     sns.boxplot(data=df, x='planta', y='DBO_salida_mg_L', ax=axes[0,0], palette="Set2")
